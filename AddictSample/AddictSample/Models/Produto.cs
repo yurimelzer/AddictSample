@@ -52,5 +52,17 @@ namespace AddictSample.Models
         public DateTime? dataValidade { get; set; }
         public string codigoPai { get; set; }
         public bool isProdutoPai { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            var produto = obj as Produto;
+            return this.id.Equals(produto.id);
+        }
+
+        public override int GetHashCode()
+        {
+            var a = this.id;
+            return Convert.ToInt32(this.id/10);
+        }
     }
 }
