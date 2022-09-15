@@ -3,6 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AddictSample.App">
     <Application.Resources>
+        
+        <ResourceDictionary>
+            
+            <ControlTemplate 
+                x:Key="mainTemplate">
+                
+                <Grid
+                    VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                    RowSpacing="0"
+                    BindingContext="{TemplateBinding BindingContext}">
+                        
+                    <Grid.RowDefinitions>
+                            
+                        <RowDefinition 
+                            Height="AUTO"/>
 
+                        <RowDefinition
+                            Height="*"/>
+                            
+                        <RowDefinition
+                            Height="AUTO"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Frame
+                        Grid.Column="0" Grid.Row="0"
+                        BackgroundColor="#424242">
+
+                        <Label
+                            HorizontalTextAlignment="Center"
+                            Text="LOGO" Padding="0,60,0,60"/>
+                    </Frame>
+
+                    <Frame
+                        Grid.Column="0" Grid.Row="1"
+                        BackgroundColor="Black" CornerRadius="25"
+                        Margin="0" Padding="0,7,0,0"
+                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+                        <Frame
+                            BackgroundColor="#fafafa" CornerRadius="25"
+                            Margin="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+                            <ContentPresenter
+                                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+                        </Frame>
+
+                    </Frame>
+
+                    <Frame 
+                        Grid.Column="0" Grid.Row="2"
+                        BackgroundColor="Transparent">
+                        
+                    </Frame>
+                    
+                </Grid>
+                
+            </ControlTemplate>
+            
+        </ResourceDictionary>
+        
     </Application.Resources>
+    
 </Application>
