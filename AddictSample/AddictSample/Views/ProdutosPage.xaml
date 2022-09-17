@@ -25,7 +25,10 @@
                                     <StackLayout>
 
                                         <Label
-                                            Text="{Binding descricao}"/>
+                                            Text="{Binding descricao}"
+                                            TextColor="Black"/>
+
+                                        <Image Source="{Binding imageThumbnail}"/>
 
                                     </StackLayout>
                                     

@@ -21,7 +21,7 @@ namespace AddictSample.ViewModels
             produtosRepository = new ProdutosRepository();
 
             this.GetApiData();
-
+            var a = produtosRepository.Load();
             produtosCollection = produtosRepository.LoadProdutosPai();
         }
 
