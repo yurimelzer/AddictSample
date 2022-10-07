@@ -22,7 +22,7 @@ namespace AddictSample.ViewModels
 
             this.GetApiData();
 
-            produtosCollection = produtosRepository.LoadProdutosPai();
+            produtosCollection = produtosRepository.Load();
         }
 
         private void GetApiData()

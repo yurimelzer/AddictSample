@@ -21,13 +21,13 @@ namespace AddictSample.Repositories
 
         public List<Produto> Load()
         {
-            return (from produto in sqlConnection.Table<Produto>() orderby produto.dataInclusao select produto).ToList();
+            return (from produto in sqlConnection.Table<Produto>() orderby produto.createdAt select produto).ToList();
         }
 
-        public List<Produto> LoadProdutosPai()
-        {
-            return (from produto in sqlConnection.Table<Produto>() orderby produto.dataInclusao where produto.isProdutoPai select produto).ToList();
-        }
+        //public List<Produto> LoadProdutosPai()
+        //{
+        //    return (from produto in sqlConnection.Table<Produto>() orderby produto.createdAt where produto.isProdutoPai select produto).ToList();
+        //}
 
         public Produto Get(long id)
         {
