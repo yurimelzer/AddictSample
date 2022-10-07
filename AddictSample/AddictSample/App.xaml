@@ -36,29 +36,50 @@
                             Text="LOGO" Padding="0,60,0,60"/>
                     </Frame>
 
-                    <Frame
-                        Grid.Column="0" Grid.Row="1"
-                        BackgroundColor="Black" CornerRadius="25"
-                        Margin="0" Padding="0,7,0,0"
-                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout
+                        Grid.Column="0" Grid.Row="1">
+                        
+                        <AbsoluteLayout>
+                            
+                            <Frame
+                                BackgroundColor="#333333" CornerRadius="25"
+                                Margin="0" Padding="0,6,0,0"
+                                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 
-                        <Frame
-                            BackgroundColor="#fafafa" CornerRadius="25"
-                            Margin="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Frame
+                                    BackgroundColor="#1a1a1a" CornerRadius="25"
+                                    Margin="0" Padding="0,4,0,0"
+                                    VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 
-                            <ContentPresenter
-                                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                                        <Frame
+                                            BackgroundColor="#000000" CornerRadius="25"
+                                            Margin="0" Padding="0,1,0,0"
+                                            VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 
-                        </Frame>
+                                            <Frame
+                                                BackgroundColor="#fafafa" CornerRadius="25" Padding="0,10,0,0"
+                                                Margin="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                                <ContentPresenter
+                                                    VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
 
-                    </Frame>
+                                            </Frame>
+                                            
+                                        </Frame>
+                                        
 
+                                </Frame>
+
+                            </Frame>
+                            
+                        </AbsoluteLayout>
+
+                    </StackLayout>
+                    
                     <Frame 
                         Grid.Column="0" Grid.Row="2"
                         BackgroundColor="Transparent">
-                        
-                    </Frame>
-                    
+
+                        </Frame>
                 </Grid>
                 
             </ControlTemplate>
