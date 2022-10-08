@@ -27,12 +27,22 @@ namespace AddictSample.ViewModels
 
         private void GetApiData()
         {
-            ProdutosService produtoService = new ProdutosService();
+            try
+            {
+                ProdutosService produtoService = new ProdutosService();
 
-            var listaApi = produtoService.GetProdutos(out string msgErro);
-            var listaDispositivo = produtosRepository.Load();
+                produtosRepository.DeleteAll();
 
-            produtosRepository.InsertAll(listaApi.Except(listaDispositivo).ToList());
+                var listaApi = produtoService.GetProdutos(out List<Variant> listVariants);
+                var listaDispositivo = produtosRepository.Load();
+
+                produtosRepository.InsertAll(listaApi.Except(listaDispositivo).ToList());
+
+            }
+            catch (Exception ex)
+            {
+                
+            }
         }
     }
 }

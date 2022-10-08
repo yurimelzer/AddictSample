@@ -11,9 +11,10 @@ namespace AddictSample.Models
         public long id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
-        public string attributes { get; set; }
+        public int stock { get; set; }
         public string specification { get; set; }
         public string brand { get; set; }
+        public bool freeShipping { get; set; }
         public DateTime? createdAt { get; set; }
         public DateTime? updatedAt { get; set; }
         public string tags { get; set; }

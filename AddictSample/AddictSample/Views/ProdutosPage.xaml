@@ -11,25 +11,25 @@
             <ListView 
                 ItemsSource="{Binding produtosCollection}"
                 HasUnevenRows="True">
-
-                <ListView.ItemTemplate>
                     
-                    <DataTemplate>
-                        
-                        <ViewCell>
+                <ListView.ItemTemplate>
                             
-                            <ViewCell.View>
+                    <DataTemplate>
                                 
-                                <Frame BackgroundColor="Transparent">
+                        <ViewCell>
                                     
+                            <ViewCell.View>
+                                        
+                                <Frame BackgroundColor="Transparent">
+                                        
                                     <StackLayout>
-
+                                            
                                         <Label
-                                            Text="{Binding descricao}"
+                                            Text="{Binding name}"
                                             TextColor="Black"/>
-
+                                                        
                                         <Image Source="{Binding imageThumbnail}"/>
-
+                                        
                                     </StackLayout>
                                     
                                 </Frame>
